@@ -1,0 +1,148 @@
+/* GOOGLE FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /* Nuetral Colors */
+
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --Font-size-default: 14px; /* (paragraph) */
+  --Font-family-monserrat: "Montserrat", sans-serif;
+  --Font-family-Frauces: "Fraunces", serif;
+}
+
+/* ====================== 
+                        GENERAL CONFIGURATIONS ======================  */
+
+html {
+  font-size: var(--Font-size-default);
+}
+
+body {
+  background-color: var(--Cream);
+}
+
+/* ====================== 
+                        Main ====================== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.container {
+  background-color: var(--White);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 10px;
+  padding-bottom: 2px;
+}
+
+.img-container {
+  background-image: url("../images/image-product-mobile.jpg");
+  height: auto;
+  padding: 10rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.product-description {
+  margin: 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--Font-family-monserrat);
+}
+
+.category {
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: var(--Font-family-Frauces);
+}
+
+.description {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.price {
+  color: var(--Dark-cyan);
+}
+
+.price .discount {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--Font-family-monserrat);
+  height: 3rem;
+  width: 100%;
+}
+
+/* ====================== 
+                        ATRIBUTION ====================== */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ======================   
+                        RESPONSIVE ====================== */
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin-top: 12vh;
+    margin-left: 17rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    margin: 20px;
+    padding-bottom: 0;
+    width: 80%;
+  }
+
+  .img-container {
+    background-image: url("../images/image-product-desktop.jpg");
+    height: auto;
+    padding: 12rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+
+  .btn-primary {
+    width: 90%;
+  }
+}
